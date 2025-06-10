@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+Technical Implementation
+Architecture & Development Approach
+During the development of this project, I focused on building a dynamic and modular architecture that leverages React's component-based paradigm. The codebase is structured to maximize maintainability and extensibility through strategic component decomposition and separation of concerns.
+Key Technical Decisions
+Component Architecture: The application follows a functional component approach with React Hooks for state management, ensuring optimal performance and code readability.
+Reusable Logic: Repetitive operations are abstracted into custom utility functions and potential custom hooks, maintaining DRY principles and improving code maintainability.
+Styling Strategy: Instead of traditional CSS files, I implemented Bootstrap 5 as the primary styling framework, enabling rapid responsive design implementation while maintaining a modern, professional appearance.
+Enhanced User Experience: FontAwesome icon library integration provides intuitive visual cues and enhances the overall user interface, making the application more accessible and user-friendly.
+Technical Stack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Frontend Framework: React 18+ with functional components
+HTTP Client: Axios for robust API communication
+UI Framework: Bootstrap 5 for responsive design
+Icons: FontAwesome React integration
+State Management: React Hooks (useState, useEffect)
 
-## Available Scripts
+Design Differences from Original Site
+The design implementation intentionally deviates from the original site to better align with environmental sustainability themes. The color palette emphasizes green and white tones, creating a visual connection to nature and eco-consciousness.
+Visual Enhancements
+Color Scheme:
 
-In the project directory, you can run:
+Primary: #20AC6B 
+Background: #1F1F1F
+Accent: #CBF6E2 
 
-### `npm start`
+Image Integration: Since the original API doesn't provide container images, I incorporated a representative skip container image to create a more complete and visually appealing user experience. This addition helps users better understand the product offerings and creates a more professional presentation.
+Getting Started
+Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Installation & Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 1. Clone the repository to your local machine
+git clone https://github.com/mfatih000/rem-waste.git
+cd rem-waste
 
-### `npm test`
+# 2. Install all required dependencies
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 3. Start the development server
+npm start
 
-### `npm run build`
+# 4. Open your browser and navigate to:
+# http://localhost:3000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Development Features
+State Management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Container Data: Managed through useState with API integration
+Modal State: Controlled component state for detail views
+Cart Management: Single-selection cart with toggle functionality
+Loading States: User feedback during API operations
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Performance Optimizations
 
-### `npm run eject`
+Efficient Re-renders: Strategic use of React Hooks
+Image Optimization: Responsive image sizing
+API Error Handling: Graceful degradation on network failures
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Responsive Design
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Mobile-First: Bootstrap's responsive grid system
+Touch-Friendly: Optimized button sizes and interactions
+Cross-Browser: Compatible with modern browsers
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This implementation demonstrates modern React development practices while maintaining clean, scalable code architecture.
