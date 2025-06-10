@@ -53,9 +53,10 @@ function App() {
     };
 
 
-    const totalPrice = cart.reduce((sum, item) => {
-        return sum + item.price_before_vat * (1 + item.vat / 100);
-    }, 0);
+    const totalPrice = (item) => {
+        return (item.price_before_vat * (1 + item.vat / 100)).toFixed(2);
+    };
+
 
     return (
         <div style={{ minHeight: '100vh', position: 'relative' }}>
@@ -155,9 +156,9 @@ function App() {
                                                 Hire Period: {item.hire_period_days} days
                                             </p>
                                             <h5 className="mb-3" style={{ color: '#4CAF50' }}>
-                                                £
-                                                {(item.price_before_vat * (1 + item.vat / 100)).toFixed(2)}
+                                                £{totalPrice(item)}
                                             </h5>
+
 
                                             <div className="d-flex justify-content-center gap-2 mb-3">
                                                 <span
@@ -264,17 +265,12 @@ function App() {
                                 className="d-flex justify-content-between align-items-center mb-2 small"
                             >
                                 <div className="text-truncate">{item.size} Yard</div>
-                                <div className="fw-bold">£{totalPrice.toFixed(2)}</div>
+                                <div className="fw-bold">£{totalPrice(item)}</div>
                             </div>
                         ))}
 
                         {cart.length > 0 && (
                             <>
-                                <hr />
-                                <div className="d-flex justify-content-between fw-semibold">
-                                    <div>Total:</div>
-                                    <div>£{totalPrice.toFixed(2)}</div>
-                                </div>
                                 <button
                                     className="btn btn-success btn-sm w-100 mt-3 fw-semibold"
                                     style={{
@@ -368,7 +364,7 @@ function App() {
                                             <hr />
                                             <div className="d-flex justify-content-between fw-bold h6">
                                                 <span>Total:</span>
-                                                <span>£{(selectedItem.price_before_vat * (1 + selectedItem.vat / 100)).toFixed(2)}</span>
+                                                <span>£{totalPrice(selectedItem)}</span>
                                             </div>
                                         </div>
                                     </div>
