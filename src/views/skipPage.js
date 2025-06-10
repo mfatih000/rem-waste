@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import skip from './assets/skip.jpg';
+import skip from '../assets/skip.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function App() {
@@ -47,9 +47,10 @@ function App() {
             setCart([item]);
         }
     };
-const resetCart = () => {
-  setCart([]);
-};
+
+    const resetCart = () => {
+        setCart([]);
+    };
 
 
     const totalPrice = cart.reduce((sum, item) => {
@@ -263,7 +264,7 @@ const resetCart = () => {
                                 className="d-flex justify-content-between align-items-center mb-2 small"
                             >
                                 <div className="text-truncate">{item.size} Yard</div>
-                                <div className="fw-bold">£{(item.price_before_vat * (1 + item.vat / 100)).toFixed(2)}</div>
+                                <div className="fw-bold">£{totalPrice.toFixed(2)}</div>
                             </div>
                         ))}
 
@@ -392,8 +393,8 @@ const resetCart = () => {
                                     </div>
 
                                     <button
-                                            className={`btn w-100 fw-bold  ${cart.find(i => i.id === selectedItem.id)? 'btn-outline-success' : 'btn-success'
-                                                    }`}
+                                        className={`btn w-100 fw-bold  ${cart.find(i => i.id === selectedItem.id) ? 'btn-outline-success' : 'btn-success'
+                                            }`}
                                         onClick={() => {
                                             toggleCartItem(selectedItem);
                                             closeModal();

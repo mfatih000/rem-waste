@@ -1,5 +1,5 @@
 import React from 'react';
-import SkipPage from './skipPage';
+import SkipPage from './views/skipPage';
 
 function App() {
   return (
